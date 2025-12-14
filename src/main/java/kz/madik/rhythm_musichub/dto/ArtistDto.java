@@ -1,7 +1,7 @@
 package kz.madik.rhythm_musichub.dto;
 
 public class ArtistDto {
-    private Long id;
+    private Long idDto;
 
     private String nameDto;
 
