@@ -2,6 +2,8 @@ package kz.madik.rhythm_musichub.entity;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
 @Table(name = "t_song")
 public class Song {
@@ -16,4 +18,7 @@ public class Song {
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "album_id")
     private Album album;
+
+    @ManyToMany(fetch = FetchType.EAGER)
+    private List<Artist> artists;
 }
