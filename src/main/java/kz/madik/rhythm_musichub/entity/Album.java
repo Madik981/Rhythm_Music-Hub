@@ -7,6 +7,7 @@ import jakarta.persistence.*;
 public class Album {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "album_id")
     private Long id;
 
     private String title;

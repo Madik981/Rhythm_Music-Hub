@@ -12,4 +12,8 @@ public class Song {
     private String name;
 
     private int duration;
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "album_id")
+    private Album album;
 }
