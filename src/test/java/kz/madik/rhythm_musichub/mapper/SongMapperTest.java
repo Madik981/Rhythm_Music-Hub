@@ -70,6 +70,13 @@ public class SongMapperTest {
         Assertions.assertEquals(songDto.getAlbumDto().getId(), songEntity.getAlbum().getId());
         Assertions.assertEquals(songDto.getArtistsDto().size(), songEntity.getArtists().size());
 
+        List<Artist> songDtoArtists = songDto.getArtistsDto();
+        List<Artist> songEntityArtists = songEntity.getArtists();
+
+        for (int i = 0; i < songDtoArtists.size(); i++) {
+            Assertions.assertEquals(songDtoArtists.get(i).getId(), songEntityArtists.get(i).getId());
+        }
+
     }
 
     @Test
@@ -107,7 +114,14 @@ public class SongMapperTest {
             Assertions.assertEquals(songEntity.getName(), songDto.getNameDto());
             Assertions.assertEquals(songEntity.getDuration(), songDto.getDurationDto());
             Assertions.assertEquals(songEntity.getAlbum(), songDto.getAlbumDto());
-            Assertions.assertEquals(songEntity.getArtists(), songDto.getArtistsDto());
+            Assertions.assertEquals(songEntity.getArtists().size(), songDto.getArtistsDto().size());
+
+            List<Artist> songArtists = songEntity.getArtists();
+            List<Artist> songDtoArtists = songDto.getArtistsDto();
+
+            for (int j = 0; j < songArtists.size(); j++) {
+                Assertions.assertEquals(songArtists.get(j).getId(), songDtoArtists.get(j).getId());
+            }
 
         }
 
