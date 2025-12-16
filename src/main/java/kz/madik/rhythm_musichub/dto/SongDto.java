@@ -1,5 +1,7 @@
 package kz.madik.rhythm_musichub.dto;
 
+import kz.madik.rhythm_musichub.entity.Album;
+import kz.madik.rhythm_musichub.entity.Artist;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -18,7 +20,7 @@ public class SongDto {
 
     private int durationDto;
 
-    private AlbumDto albumDto;
+    private Album albumDto;
 
-    private List<ArtistDto> artistsDto;
+    private List<Artist> artistsDto;
 }
