@@ -7,7 +7,7 @@ import java.util.List;
 public interface AlbumService {
     List<AlbumDto> getAll();
     AlbumDto getById(Long id);
-    AlbumDto add(AlbumDto song);
+    AlbumDto addAlbum(AlbumDto song);
     AlbumDto updateById(Long id, AlbumDto songDto);
     boolean deleteById(Long id);
 }

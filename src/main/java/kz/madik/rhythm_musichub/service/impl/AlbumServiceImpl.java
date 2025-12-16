@@ -29,7 +29,7 @@ public class AlbumServiceImpl implements AlbumService {
     }
 
     @Override
-    public AlbumDto add(AlbumDto albumDto) {
+    public AlbumDto addAlbum(AlbumDto albumDto) {
         return albumMapper.toDto(albumRepository.save(albumMapper.toEntity(albumDto)));
     }
 

@@ -7,7 +7,7 @@ import java.util.List;
 public interface ArtistService {
     List<ArtistDto> getAll();
     ArtistDto getById(Long id);
-    ArtistDto add(ArtistDto song);
+    ArtistDto addArtist(ArtistDto song);
     ArtistDto updateById(Long id, ArtistDto songDto);
     boolean deleteById(Long id);
 }

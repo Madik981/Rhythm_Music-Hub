@@ -29,7 +29,7 @@ public class ArtistServiceImpl implements ArtistService {
     }
 
     @Override
-    public ArtistDto add(ArtistDto artistDto) {
+    public ArtistDto addArtist(ArtistDto artistDto) {
         return artistMapper.toDto(artistRepository.save(artistMapper.toEntity(artistDto)));
     }
 

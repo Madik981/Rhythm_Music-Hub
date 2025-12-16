@@ -28,7 +28,7 @@ public class SongServiceImpl implements SongService {
     }
 
     @Override
-    public SongDto add(SongDto songDto) {
+    public SongDto addSong(SongDto songDto) {
         return songMapper.toDto(songRepository.save(songMapper.toEntity(songDto)));
     }
 
