@@ -8,3 +8,12 @@ services:
       - POSTGRES_DB=RhythmDB
     ports:
       - "2345:5432"
+  test-db-service:
+    container_name: 'TestDB'
+    image: 'postgres'
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=TestDB
+    ports:
+      - "3245:5432"
