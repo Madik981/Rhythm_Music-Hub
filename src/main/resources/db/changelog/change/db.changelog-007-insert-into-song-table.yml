@@ -231,10 +231,10 @@ databaseChangeLog:
                   valueNumeric: "251"
               - column:
                   name: spotify_link
-                  value: https://open.spotify.com/track/213x4gsFDm04hSqIUkg88w?si=1db91156634b48a3
+                  value: https://open.spotify.com/track/2WTfb6QxijezJP8GYidHRo?si=978e0278363549b1
               - column:
                   name: apple_music_link
-                  value: https://music.apple.com/kz/album/on-top-of-the-world/1440829989?i=1440830139
+                  value: https://music.apple.com/kz/album/kobelek/1751946424?i=1751946681
               - column:
                   name: album_id
                   valueNumeric: "5"
@@ -249,10 +249,10 @@ databaseChangeLog:
                   valueNumeric: "198"
               - column:
                   name: spotify_link
-                  value: https://open.spotify.com/track/213x4gsFDm04hSqIUkg88w?si=1db91156634b48a3
+                  value: https://open.spotify.com/track/0Wq7dV7Oi0cGJQ2xG1qdux?si=8d96d11a15cb4565
               - column:
                   name: apple_music_link
-                  value: https://music.apple.com/kz/album/on-top-of-the-world/1440829989?i=1440830139
+                  value: https://music.apple.com/kz/album/aiga-qarap/1700912870?i=1700912887
               - column:
                   name: album_id
                   valueNumeric: "6"
