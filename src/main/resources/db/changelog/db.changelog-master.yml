@@ -9,3 +9,5 @@ databaseChangeLog:
       file: db/changelog/change/db.changelog-004-create-song-artists-table.yml
   - include:
       file: db/changelog/change/db.changelog-005-insert-into-album-table.yml
+  - include:
+      file: db/changelog/change/db.changelog-006-insert-into-artists-table.yml

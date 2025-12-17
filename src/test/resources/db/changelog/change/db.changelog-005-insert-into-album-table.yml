@@ -2,7 +2,7 @@ databaseChangeLog:
   - changeSet:
       id: insert-into-album-table
       author: madik981
-      comment: first liquibase migration
+      comment: insert initial data into album table
       changes:
         - insert:
             tableName: t_album
