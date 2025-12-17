@@ -2,10 +2,7 @@ package kz.madik.rhythm_musichub.dto;
 
 import kz.madik.rhythm_musichub.entity.Album;
 import kz.madik.rhythm_musichub.entity.Artist;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.util.List;
 
@@ -13,6 +10,7 @@ import java.util.List;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 public class SongDto {
     private Long idDto;
 
