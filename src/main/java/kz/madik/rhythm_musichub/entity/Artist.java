@@ -3,6 +3,8 @@ package kz.madik.rhythm_musichub.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.time.LocalDate;
+
 @Entity
 @Getter
 @Setter
@@ -19,6 +21,6 @@ public class Artist {
 
     private String nationality;
 
-    private String birthDate;
+    private LocalDate birthDate;
 
 }

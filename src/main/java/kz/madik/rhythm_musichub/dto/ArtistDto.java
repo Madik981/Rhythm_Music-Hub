@@ -2,6 +2,8 @@ package kz.madik.rhythm_musichub.dto;
 
 import lombok.*;
 
+import java.time.LocalDate;
+
 @Getter
 @Setter
 @NoArgsConstructor
@@ -14,5 +16,5 @@ public class ArtistDto {
 
     private String nationalityDto;
 
-    private String birthDateDto;
+    private LocalDate birthDateDto;
 }
