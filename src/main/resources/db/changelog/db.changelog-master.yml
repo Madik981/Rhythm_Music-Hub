@@ -13,3 +13,5 @@ databaseChangeLog:
       file: db/changelog/change/db.changelog-006-insert-into-artists-table.yml
   - include:
       file: db/changelog/change/db.changelog-007-insert-into-song-table.yml
+  - include:
+      file: db/changelog/change/db.changelog-008-insert-into-song-artists-table.yml
