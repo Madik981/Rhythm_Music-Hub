@@ -18,9 +18,9 @@ databaseChangeLog:
                   name: title
                   type: varchar(50)
                   constraints:
-                    nullable: false
+                    nullable: true
               - column:
                   name: release_year
                   type: int
                   constraints:
-                    nullable: false
+                    nullable: true

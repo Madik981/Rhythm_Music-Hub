@@ -18,7 +18,7 @@ databaseChangeLog:
                   name: name
                   type: varchar(100)
                   constraints:
-                    nullable: false
+                    nullable: true
               - column:
                   name: nationality
                   type: varchar(50)
