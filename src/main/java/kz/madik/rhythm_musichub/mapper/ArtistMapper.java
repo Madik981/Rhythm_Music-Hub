@@ -12,15 +12,13 @@ public interface ArtistMapper {
     @Mapping(target = "idDto", source = "id")
     @Mapping(target = "nameDto", source = "name")
     @Mapping(target = "nationalityDto", source = "nationality")
-    @Mapping(target = "ageDto", source = "age")
-    @Mapping(target = "genderDto", source = "gender")
+    @Mapping(target = "birthDateDto", source = "birthDate")
     ArtistDto toDto(Artist song);
 
     @Mapping(target = "id", source = "idDto")
     @Mapping(target = "name", source = "nameDto")
     @Mapping(target = "nationality", source = "nationalityDto")
-    @Mapping(target = "age", source = "ageDto")
-    @Mapping(target = "gender", source = "genderDto")
+    @Mapping(target = "birthDate", source = "birthDateDto")
     Artist toEntity(ArtistDto songDto);
 
     List<ArtistDto> toDtoList(List<Artist> songs);

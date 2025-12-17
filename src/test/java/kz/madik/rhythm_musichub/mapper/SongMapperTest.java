@@ -21,7 +21,7 @@ public class SongMapperTest {
     @Test
     void convertEntityToDtoTest(){
 
-        Song songEntity = new Song(1L, "madi", 210, new Album(1L, "madi", 2025), List.of(new Artist(1L, "madik", "Kazakh", 20, "Male")));
+        Song songEntity = new Song(1L, "madi", 210, new Album(1L, "madi", 2025), List.of(new Artist(1L, "madik", "Kazakh", "20 September 1995")));
 
         SongDto songDto = songMapper.toDto(songEntity);
 
@@ -52,7 +52,7 @@ public class SongMapperTest {
     @Test
     void convertDtoToEntityTest(){
 
-        SongDto songDto = new SongDto(1L, "madi", 210, new Album(1L, "madi", 2025), List.of(new Artist(1L, "madik", "Kazakh", 20, "Male")));
+        SongDto songDto = new SongDto(1L, "madi", 210, new Album(1L, "madi", 2025), List.of(new Artist(1L, "madik", "Kazakh", "20 September 1995")));
 
         Song songEntity = songMapper.toEntity(songDto);
 
@@ -83,9 +83,9 @@ public class SongMapperTest {
     void convertEntityListToDtoListTest(){
 
         List<Song> songEntityList = new ArrayList<>();
-        songEntityList.add(new Song(1L, "song1", 200, new Album(1L, "album1", 2020), List.of(new Artist(1L, "artist1", "Kazakh", 30, "Male"))));
-        songEntityList.add(new Song(2L, "song2", 180, new Album(2L, "album2", 2021), List.of(new Artist(2L, "artist2", "Kazakh", 25, "Female"))));
-        songEntityList.add(new Song(3L, "song3", 240, new Album(3L, "album3", 2022), List.of(new Artist(3L, "artist3", "Kazakh", 28, "Male"))));
+        songEntityList.add(new Song(1L, "song1", 200, new Album(1L, "album1", 2020), List.of(new Artist(1L, "artist1", "Kazakh", "22 February 1995"))));
+        songEntityList.add(new Song(2L, "song2", 180, new Album(2L, "album2", 2021), List.of(new Artist(2L, "artist2", "Kazakh", "5 May 2001"))));
+        songEntityList.add(new Song(3L, "song3", 240, new Album(3L, "album3", 2022), List.of(new Artist(3L, "artist3", "Kazakh", "12 December 1998"))));
 
 
         List<SongDto> songDtoList = songMapper.toDtoList(songEntityList);

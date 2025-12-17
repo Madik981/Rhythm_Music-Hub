@@ -41,8 +41,7 @@ public class ArtistServiceImpl implements ArtistService {
 
         updateArtist.setName(artist.getName());
         updateArtist.setNationality(artist.getNationality());
-        updateArtist.setAge(artist.getAge());
-        updateArtist.setGender(artist.getGender());
+        updateArtist.setBirthDate(artist.getBirthDate());
 
         return artistMapper.toDto(artistRepository.save(updateArtist));
     }

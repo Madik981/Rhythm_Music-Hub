@@ -21,8 +21,6 @@ public class Artist {
 
     private String nationality;
 
-    private int age;
-
-    private String gender;
+    private String birthDate;
 
 }
