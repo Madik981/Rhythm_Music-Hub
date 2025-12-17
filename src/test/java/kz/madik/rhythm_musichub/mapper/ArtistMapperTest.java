@@ -19,7 +19,7 @@ public class ArtistMapperTest {
     @Test
     void convertEntityToDtoTest(){
 
-        Artist artistEntity = new Artist(1L, "madik", "Kazakh", "19 June 2005");
+        Artist artistEntity = new Artist(1L, "madik", "Kazakh", "2005-06-19");
 
         ArtistDto artistDto = artistMapper.toDto(artistEntity);
 
@@ -40,7 +40,7 @@ public class ArtistMapperTest {
     @Test
     void convertDtoToEntityTest(){
 
-        ArtistDto artistDto = new ArtistDto(1L, "madik", "Kazakh", "19 June 2005");
+        ArtistDto artistDto = new ArtistDto(1L, "madik", "Kazakh", "2005-06-19");
 
         Artist artistEntity = artistMapper.toEntity(artistDto);
 
@@ -62,9 +62,9 @@ public class ArtistMapperTest {
     void convertEntityListToDtoListTest(){
 
         List<Artist> artistEntityList = new ArrayList<>();
-        artistEntityList.add(new Artist(1L, "madik)", "Kazakh", "19 June 2005"));
-        artistEntityList.add(new Artist(2L, "aigerim", "Kazakh", "15 August 2003"));
-        artistEntityList.add(new Artist(3L, "john", "American", "22 November 2000"));
+        artistEntityList.add(new Artist(1L, "madik)", "Kazakh", "2005-06-19"));
+        artistEntityList.add(new Artist(2L, "aigerim", "Kazakh", "2003-08-15"));
+        artistEntityList.add(new Artist(3L, "john", "American", "2000-11-25"));
 
 
         List<ArtistDto> artistDtoList = artistMapper.toDtoList(artistEntityList);
