@@ -17,6 +17,7 @@ public class AlbumServiceTest {
 
     @Test
     void getAllTest() {
+
         AlbumDto addAlbum = AlbumDto
                 .builder()
                 .titleDto("Initial Album")
@@ -42,10 +43,12 @@ public class AlbumServiceTest {
             Assertions.assertNotNull(dto.getTitleDto());
             Assertions.assertNotNull(dto.getReleaseYearDto());
         }
+
     }
 
     @Test
     void getByIdTest() {
+
         AlbumDto addAlbum = AlbumDto
                 .builder()
                 .titleDto("Test Album")
@@ -72,10 +75,12 @@ public class AlbumServiceTest {
 
         AlbumDto check = albumService.getById(-1L);
         Assertions.assertNull(check);
+
     }
 
     @Test
     void addTest() {
+
         AlbumDto albumDto = AlbumDto
                 .builder()
                 .titleDto("Test Album")
@@ -189,5 +194,6 @@ public class AlbumServiceTest {
         AlbumDto deleted = albumService.getById(someId);
 
         Assertions.assertNull(deleted);
+
     }
 }
