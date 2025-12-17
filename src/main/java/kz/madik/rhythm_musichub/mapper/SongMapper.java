@@ -12,6 +12,8 @@ public interface SongMapper {
     @Mapping(target = "idDto", source = "id")
     @Mapping(target = "nameDto", source = "name")
     @Mapping(target = "durationDto", source = "duration")
+    @Mapping(target = "spotifyLinkDto", source = "spotifyLink")
+    @Mapping(target = "appleMusicLinkDto", source = "appleMusicLink")
     @Mapping(target = "albumDto", source = "album")
     @Mapping(target = "artistsDto", source = "artists")
     SongDto toDto(Song song);

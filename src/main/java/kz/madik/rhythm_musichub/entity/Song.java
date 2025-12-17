@@ -23,6 +23,10 @@ public class Song {
 
     private int duration;
 
+    private String spotifyLink;
+
+    private String appleMusicLink;
+
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "album_id")
     private Album album;

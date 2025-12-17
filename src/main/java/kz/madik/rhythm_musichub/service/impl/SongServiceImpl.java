@@ -40,6 +40,8 @@ public class SongServiceImpl implements SongService {
 
         updateSong.setName(song.getName());
         updateSong.setDuration(song.getDuration());
+        updateSong.setSpotifyLink(song.getSpotifyLink());
+        updateSong.setAppleMusicLink(song.getAppleMusicLink());
         updateSong.setAlbum(song.getAlbum());
         updateSong.setArtists(song.getArtists());
 

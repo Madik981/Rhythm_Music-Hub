@@ -25,6 +25,16 @@ databaseChangeLog:
                   constraints:
                       nullable: false
               - column:
+                  name: spotify_link
+                  type: varchar(255)
+                  constraints:
+                      nullable: true
+              - column:
+                  name: apple_music_link
+                  type: varchar(255)
+                  constraints:
+                      nullable: true
+              - column:
                   name: album_id
                   type: bigint
                   constraints:
