@@ -19,7 +19,7 @@ public class ArtistMapperTest {
     @Test
     void convertEntityToDtoTest(){
 
-        Artist artistEntity = new Artist(1L, "madik", "Kazakh", 20, "Male");
+        Artist artistEntity = new Artist(1L, "madik", "Kazakh", "2005-06-19");
 
         ArtistDto artistDto = artistMapper.toDto(artistEntity);
 
@@ -28,21 +28,19 @@ public class ArtistMapperTest {
         Assertions.assertNotNull(artistDto.getIdDto());
         Assertions.assertNotNull(artistDto.getNameDto());
         Assertions.assertNotNull(artistDto.getNationalityDto());
-        Assertions.assertNotNull(artistDto.getAgeDto());
-        Assertions.assertNotNull(artistDto.getGenderDto());
+        Assertions.assertNotNull(artistDto.getBirthDateDto());
 
         Assertions.assertEquals(artistEntity.getId(), artistDto.getIdDto());
         Assertions.assertEquals(artistEntity.getName(), artistDto.getNameDto());
         Assertions.assertEquals(artistEntity.getNationality(), artistDto.getNationalityDto());
-        Assertions.assertEquals(artistEntity.getAge(), artistDto.getAgeDto());
-        Assertions.assertEquals(artistEntity.getGender(), artistDto.getGenderDto());
+        Assertions.assertEquals(artistEntity.getBirthDate(), artistDto.getBirthDateDto());
 
     }
 
     @Test
     void convertDtoToEntityTest(){
 
-        ArtistDto artistDto = new ArtistDto(1L, "madik", "Kazakh", 20, "Male");
+        ArtistDto artistDto = new ArtistDto(1L, "madik", "Kazakh", "2005-06-19");
 
         Artist artistEntity = artistMapper.toEntity(artistDto);
 
@@ -51,14 +49,12 @@ public class ArtistMapperTest {
         Assertions.assertNotNull(artistEntity.getId());
         Assertions.assertNotNull(artistEntity.getName());
         Assertions.assertNotNull(artistEntity.getNationality());
-        Assertions.assertNotNull(artistEntity.getAge());
-        Assertions.assertNotNull(artistEntity.getGender());
+        Assertions.assertNotNull(artistEntity.getBirthDate());
 
         Assertions.assertEquals(artistDto.getIdDto(), artistEntity.getId());
         Assertions.assertEquals(artistDto.getNameDto(), artistEntity.getName());
         Assertions.assertEquals(artistDto.getNationalityDto(), artistEntity.getNationality());
-        Assertions.assertEquals(artistDto.getAgeDto(), artistEntity.getAge());
-        Assertions.assertEquals(artistDto.getGenderDto(), artistEntity.getGender());
+        Assertions.assertEquals(artistDto.getBirthDateDto(), artistEntity.getBirthDate());
 
     }
 
@@ -66,9 +62,9 @@ public class ArtistMapperTest {
     void convertEntityListToDtoListTest(){
 
         List<Artist> artistEntityList = new ArrayList<>();
-        artistEntityList.add(new Artist(1L, "madik)", "Kazakh", 20, "Male"));
-        artistEntityList.add(new Artist(2L, "aigerim", "Kazakh", 22, "Female"));
-        artistEntityList.add(new Artist(3L, "john", "American", 30, "Male"));
+        artistEntityList.add(new Artist(1L, "madik)", "Kazakh", "2005-06-19"));
+        artistEntityList.add(new Artist(2L, "aigerim", "Kazakh", "2003-08-15"));
+        artistEntityList.add(new Artist(3L, "john", "American", "2000-11-25"));
 
 
         List<ArtistDto> artistDtoList = artistMapper.toDtoList(artistEntityList);
@@ -90,14 +86,12 @@ public class ArtistMapperTest {
             Assertions.assertNotNull(artistDto.getIdDto());
             Assertions.assertNotNull(artistDto.getNameDto());
             Assertions.assertNotNull(artistDto.getNationalityDto());
-            Assertions.assertNotNull(artistDto.getAgeDto());
-            Assertions.assertNotNull(artistDto.getGenderDto());
+            Assertions.assertNotNull(artistDto.getBirthDateDto());
 
             Assertions.assertEquals(artistEntity.getId(), artistDto.getIdDto());
             Assertions.assertEquals(artistEntity.getName(), artistDto.getNameDto());
             Assertions.assertEquals(artistEntity.getNationality(), artistDto.getNationalityDto());
-            Assertions.assertEquals(artistEntity.getAge(), artistDto.getAgeDto());
-            Assertions.assertEquals(artistEntity.getGender(), artistDto.getGenderDto());
+            Assertions.assertEquals(artistEntity.getBirthDate(), artistDto.getBirthDateDto());
 
         }
 

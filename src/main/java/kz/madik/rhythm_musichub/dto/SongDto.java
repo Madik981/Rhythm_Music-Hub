@@ -20,6 +20,10 @@ public class SongDto {
 
     private int durationDto;
 
+    private String spotifyLinkDto;
+
+    private String appleMusicLinkDto;
+
     private Album albumDto;
 
     private List<Artist> artistsDto;

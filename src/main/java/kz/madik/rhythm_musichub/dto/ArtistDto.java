@@ -16,7 +16,5 @@ public class ArtistDto {
 
     private String nationalityDto;
 
-    private int ageDto;
-
-    private String genderDto;
+    private String birthDateDto;
 }

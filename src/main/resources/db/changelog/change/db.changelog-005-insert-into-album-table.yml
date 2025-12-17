@@ -1,0 +1,60 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-into-album-table
+      author: madik981
+      comment: insert initial data into album table
+      changes:
+        - insert:
+            tableName: t_album
+            columns:
+              - column:
+                  name: title
+                  value: Blurryface
+              - column:
+                  name: release_year
+                  valueNumeric: "2015"
+        - insert:
+            tableName: t_album
+            columns:
+              - column:
+                  name: title
+                  value: Evolve
+              - column:
+                  name: release_year
+                  valueNumeric: "2017"
+        - insert:
+            tableName: t_album
+            columns:
+              - column:
+                  name: title
+                  value: Night Visions
+              - column:
+                  name: release_year
+                  valueNumeric: "2012"
+        - insert:
+            tableName: t_album
+            columns:
+              - column:
+                  name: title
+                  value: Starboy
+              - column:
+                  name: release_year
+                  valueNumeric: "2016"
+        - insert:
+            tableName: t_album
+            columns:
+              - column:
+                  name: title
+                  value: Kobelek - Single
+              - column:
+                  name: release_year
+                  valueNumeric: "2024"
+        - insert:
+            tableName: t_album
+            columns:
+              - column:
+                  name: title
+                  value: Aiga Qarap - Single
+              - column:
+                  name: release_year
+                  valueNumeric: "2023"
