@@ -99,6 +99,15 @@ databaseChangeLog:
             columns:
               - column:
                   name: song_id
+                  valueNumeric: "10"
+              - column:
+                  name: artists_id
+                  valueNumeric: "6"
+        - insert:
+            tableName: t_song_artists
+            columns:
+              - column:
+                  name: song_id
                   valueNumeric: "11"
               - column:
                   name: artists_id
@@ -112,6 +121,15 @@ databaseChangeLog:
               - column:
                   name: artists_id
                   valueNumeric: "3"
+        - insert:
+            tableName: t_song_artists
+            columns:
+              - column:
+                  name: song_id
+                  valueNumeric: "12"
+              - column:
+                  name: artists_id
+                  valueNumeric: "6"
         - insert:
             tableName: t_song_artists
             columns:
