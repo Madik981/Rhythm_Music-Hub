@@ -12,5 +12,5 @@ public class AlbumDto {
 
     private String titleDto;
 
-    private int releaseYearDto;
+    private Integer releaseYearDto;
 }

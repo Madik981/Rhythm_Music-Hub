@@ -56,15 +56,15 @@ public class SongServiceTest {
                 .durationDto(200)
                 .spotifyLinkDto("https://spotify.com/initiallink")
                 .appleMusicLinkDto("https://applemusic.com/initiallink")
-                .albumDto(Album
+                .albumDto(AlbumDto
                         .builder()
-                        .id(1L)
+                        .idDto(1L)
                         .build()
                 )
                 .artistsDto(List.of(
-                        Artist
+                        ArtistDto
                                 .builder()
-                                .id(1L)
+                                .idDto(1L)
                                 .build()
                 ))
                 .build();
@@ -127,15 +127,15 @@ public class SongServiceTest {
                 .durationDto(200)
                 .spotifyLinkDto("https://spotify.com/initiallink")
                 .appleMusicLinkDto("https://applemusic.com/initiallink")
-                .albumDto(Album
+                .albumDto(AlbumDto
                         .builder()
-                        .id(1L)
+                        .idDto(1L)
                         .build()
                 )
                 .artistsDto(List.of(
-                        Artist
+                        ArtistDto
                                 .builder()
-                                .id(1L)
+                                .idDto(1L)
                                 .build()
                 ))
                 .build();
@@ -198,19 +198,19 @@ public class SongServiceTest {
                 .durationDto(123)
                 .spotifyLinkDto("https://spotify.com/examplelink")
                 .appleMusicLinkDto("https://applemusic.com/examplelink")
-                .albumDto(Album
+                .albumDto(AlbumDto
                         .builder()
-                        .id(1L)
+                        .idDto(1L)
                         .build()
                 )
                 .artistsDto(List.of(
-                        Artist
+                        ArtistDto
                         .builder()
-                        .id(1L)
+                        .idDto(1L)
                         .build(),
-                        Artist
+                        ArtistDto
                         .builder()
-                        .id(2L)
+                        .idDto(2L)
                         .build()
                 ))
                 .build();
@@ -233,8 +233,8 @@ public class SongServiceTest {
         Assertions.assertEquals(add.getDurationDto(), songDto.getDurationDto());
         Assertions.assertEquals(add.getSpotifyLinkDto(), songDto.getSpotifyLinkDto());
         Assertions.assertEquals(add.getAppleMusicLinkDto(), songDto.getAppleMusicLinkDto());
-        Assertions.assertEquals(add.getAlbumDto().getTitle(), songDto.getAlbumDto().getTitle());
-        Assertions.assertEquals(add.getAlbumDto().getReleaseYear(), songDto.getAlbumDto().getReleaseYear());
+        Assertions.assertEquals(add.getAlbumDto().getTitleDto(), songDto.getAlbumDto().getTitleDto());
+        Assertions.assertEquals(add.getAlbumDto().getReleaseYearDto(), songDto.getAlbumDto().getReleaseYearDto());
         Assertions.assertEquals(add.getArtistsDto().size(), songDto.getArtistsDto().size());
 
 
@@ -256,13 +256,13 @@ public class SongServiceTest {
         Assertions.assertEquals(added.getDurationDto(), add.getDurationDto());
         Assertions.assertEquals(added.getSpotifyLinkDto(), add.getSpotifyLinkDto());
         Assertions.assertEquals(added.getAppleMusicLinkDto(), add.getAppleMusicLinkDto());
-        Assertions.assertEquals(added.getAlbumDto().getId(), add.getAlbumDto().getId());
+        Assertions.assertEquals(added.getAlbumDto().getIdDto(), add.getAlbumDto().getIdDto());
         Assertions.assertEquals(added.getArtistsDto().size(), add.getArtistsDto().size());
 
-        List<Artist> addedArtists = added.getArtistsDto();
-        List<Artist> addArtists = add.getArtistsDto();
+        List<ArtistDto> addedArtists = added.getArtistsDto();
+        List<ArtistDto> addArtists = add.getArtistsDto();
         for(int i = 0; i < addedArtists.size(); i++) {
-            Assertions.assertEquals(addedArtists.get(i).getId(), addArtists.get(i).getId());
+            Assertions.assertEquals(addedArtists.get(i).getIdDto(), addArtists.get(i).getIdDto());
         }
     }
 
@@ -299,15 +299,15 @@ public class SongServiceTest {
                 .durationDto(200)
                 .spotifyLinkDto("https://spotify.com/initiallink")
                 .appleMusicLinkDto("https://applemusic.com/initiallink")
-                .albumDto(Album
+                .albumDto(AlbumDto
                         .builder()
-                        .id(1L)
+                        .idDto(1L)
                         .build()
                 )
                 .artistsDto(List.of(
-                        Artist
+                        ArtistDto
                                 .builder()
-                                .id(1L)
+                                .idDto(1L)
                                 .build()
                 ))
                 .build();
@@ -329,19 +329,19 @@ public class SongServiceTest {
                 .durationDto(123)
                 .spotifyLinkDto("https://spotify.com/examplelink")
                 .appleMusicLinkDto("https://applemusic.com/examplelink")
-                .albumDto(Album
+                .albumDto(AlbumDto
                         .builder()
-                        .id(1L)
+                        .idDto(1L)
                         .build()
                 )
                 .artistsDto(List.of(
-                        Artist
+                        ArtistDto
                                 .builder()
-                                .id(1L)
+                                .idDto(1L)
                                 .build(),
-                        Artist
+                        ArtistDto
                                 .builder()
-                                .id(2L)
+                                .idDto(2L)
                                 .build()
                 ))
                 .build();
@@ -364,13 +364,13 @@ public class SongServiceTest {
         Assertions.assertEquals(update.getDurationDto(), updateSong.getDurationDto());
         Assertions.assertEquals(update.getSpotifyLinkDto(), updateSong.getSpotifyLinkDto());
         Assertions.assertEquals(update.getAppleMusicLinkDto(), updateSong.getAppleMusicLinkDto());
-        Assertions.assertEquals(update.getAlbumDto().getId(), updateSong.getAlbumDto().getId());
+        Assertions.assertEquals(update.getAlbumDto().getIdDto(), updateSong.getAlbumDto().getIdDto());
         Assertions.assertEquals(update.getArtistsDto().size(), updateSong.getArtistsDto().size());
 
-        List<Artist> updateArtists = update.getArtistsDto();
-        List<Artist> updateSongArtists = updateSong.getArtistsDto();
+        List<ArtistDto> updateArtists = update.getArtistsDto();
+        List<ArtistDto> updateSongArtists = updateSong.getArtistsDto();
         for(int i = 0; i < updateArtists.size(); i++) {
-            Assertions.assertEquals(updateArtists.get(i).getId(), updateSongArtists.get(i).getId());
+            Assertions.assertEquals(updateArtists.get(i).getIdDto(), updateSongArtists.get(i).getIdDto());
         }
 
 
@@ -391,12 +391,12 @@ public class SongServiceTest {
         Assertions.assertEquals(updated.getDurationDto(), update.getDurationDto());
         Assertions.assertEquals(updated.getSpotifyLinkDto(), update.getSpotifyLinkDto());
         Assertions.assertEquals(updated.getAppleMusicLinkDto(), update.getAppleMusicLinkDto());
-        Assertions.assertEquals(updated.getAlbumDto().getId(), update.getAlbumDto().getId());
+        Assertions.assertEquals(updated.getAlbumDto().getIdDto(), update.getAlbumDto().getIdDto());
         Assertions.assertEquals(updated.getArtistsDto().size(), update.getArtistsDto().size());
 
-        List<Artist> updatedArtists = updated.getArtistsDto();
+        List<ArtistDto> updatedArtists = updated.getArtistsDto();
         for(int i = 0; i < updatedArtists.size(); i++) {
-            Assertions.assertEquals(updatedArtists.get(i).getId(), updateArtists.get(i).getId());
+            Assertions.assertEquals(updatedArtists.get(i).getIdDto(), updateArtists.get(i).getIdDto());
         }
     }
 
@@ -433,15 +433,15 @@ public class SongServiceTest {
                 .durationDto(200)
                 .spotifyLinkDto("https://spotify.com/initiallink")
                 .appleMusicLinkDto("https://applemusic.com/initiallink")
-                .albumDto(Album
+                .albumDto(AlbumDto
                         .builder()
-                        .id(1L)
+                        .idDto(1L)
                         .build()
                 )
                 .artistsDto(List.of(
-                        Artist
+                        ArtistDto
                                 .builder()
-                                .id(1L)
+                                .idDto(1L)
                                 .build()
                 ))
                 .build();

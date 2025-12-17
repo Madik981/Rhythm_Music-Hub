@@ -18,5 +18,5 @@ public class Album {
 
     private String title;
 
-    private int releaseYear;
+    private Integer releaseYear;
 }
