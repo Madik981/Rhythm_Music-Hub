@@ -1,5 +1,7 @@
 package kz.madik.rhythm_musichub.mapper;
 
+import kz.madik.rhythm_musichub.dto.AlbumDto;
+import kz.madik.rhythm_musichub.dto.ArtistDto;
 import kz.madik.rhythm_musichub.dto.SongDto;
 import kz.madik.rhythm_musichub.entity.Album;
 import kz.madik.rhythm_musichub.entity.Artist;
@@ -9,6 +11,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,7 +31,7 @@ public class SongMapperTest {
                 "testLink",
                 "testLink",
                 new Album(1L, "madi", 2025),
-                List.of(new Artist(1L, "madik", "Kazakh", "20 September 1995"))
+                List.of(new Artist(1L, "madik", "Kazakh", LocalDate.parse("1995-09-20")))
         );
 
         SongDto songDto = songMapper.toDto(songEntity);
@@ -49,14 +52,14 @@ public class SongMapperTest {
         Assertions.assertEquals(songEntity.getDuration(), songDto.getDurationDto());
         Assertions.assertEquals(songEntity.getSpotifyLink(), songDto.getSpotifyLinkDto());
         Assertions.assertEquals(songEntity.getAppleMusicLink(), songDto.getAppleMusicLinkDto());
-        Assertions.assertEquals(songEntity.getAlbum().getId(), songDto.getAlbumDto().getId());
+        Assertions.assertEquals(songEntity.getAlbum().getId(), songDto.getAlbumDto().getIdDto());
         Assertions.assertEquals(songEntity.getArtists().size(), songDto.getArtistsDto().size());
 
         List<Artist> songArtists = songEntity.getArtists();
-        List<Artist> songDtoArtists = songDto.getArtistsDto();
+        List<ArtistDto> songDtoArtists = songDto.getArtistsDto();
 
         for (int i = 0; i < songArtists.size(); i++) {
-            Assertions.assertEquals(songArtists.get(i).getId(), songDtoArtists.get(i).getId());
+            Assertions.assertEquals(songArtists.get(i).getId(), songDtoArtists.get(i).getIdDto());
         }
 
     }
@@ -70,8 +73,8 @@ public class SongMapperTest {
                 210,
                 "testLink",
                 "testLink",
-                new Album(1L, "madi", 2025),
-                List.of(new Artist(1L, "madik", "Kazakh", "20 September 1995"))
+                new AlbumDto(1L, "madi", 2025),
+                List.of(new ArtistDto(1L, "madik", "Kazakh", LocalDate.parse("1995-09-20")))
         );
 
         Song songEntity = songMapper.toEntity(songDto);
@@ -91,14 +94,14 @@ public class SongMapperTest {
         Assertions.assertEquals(songDto.getDurationDto(), songEntity.getDuration());
         Assertions.assertEquals(songDto.getSpotifyLinkDto(), songEntity.getSpotifyLink());
         Assertions.assertEquals(songDto.getAppleMusicLinkDto(), songEntity.getAppleMusicLink());
-        Assertions.assertEquals(songDto.getAlbumDto().getId(), songEntity.getAlbum().getId());
+        Assertions.assertEquals(songDto.getAlbumDto().getIdDto(), songEntity.getAlbum().getId());
         Assertions.assertEquals(songDto.getArtistsDto().size(), songEntity.getArtists().size());
 
-        List<Artist> songDtoArtists = songDto.getArtistsDto();
+        List<ArtistDto> songDtoArtists = songDto.getArtistsDto();
         List<Artist> songEntityArtists = songEntity.getArtists();
 
         for (int i = 0; i < songDtoArtists.size(); i++) {
-            Assertions.assertEquals(songDtoArtists.get(i).getId(), songEntityArtists.get(i).getId());
+            Assertions.assertEquals(songDtoArtists.get(i).getIdDto(), songEntityArtists.get(i).getId());
         }
 
     }
@@ -114,7 +117,7 @@ public class SongMapperTest {
                 "testLink",
                 "testLink",
                 new Album(1L, "album1", 2020),
-                List.of(new Artist(1L, "artist1", "Kazakh", "22 February 1995"))
+                List.of(new Artist(1L, "artist1", "Kazakh", LocalDate.parse("1995-02-22")))
             ));
         songEntityList.add(new Song(
                 2L,
@@ -123,7 +126,7 @@ public class SongMapperTest {
                 "testLink",
                 "testLink",
                 new Album(2L, "album2", 2021),
-                List.of(new Artist(2L, "artist2", "Kazakh", "5 May 2001"))
+                List.of(new Artist(2L, "artist2", "Kazakh", LocalDate.parse("2001-05-05")))
             ));
         songEntityList.add(new Song(
                 3L,
@@ -132,7 +135,7 @@ public class SongMapperTest {
                 "testLink",
                 "testLink",
                 new Album(3L, "album3", 2022),
-                List.of(new Artist(3L, "artist3", "Kazakh", "12 December 1998"))
+                List.of(new Artist(3L, "artist3", "Kazakh", LocalDate.parse("1998-12-12")))
             ));
 
 
@@ -165,14 +168,14 @@ public class SongMapperTest {
             Assertions.assertEquals(songEntity.getDuration(), songDto.getDurationDto());
             Assertions.assertEquals(songEntity.getSpotifyLink(), songDto.getSpotifyLinkDto());
             Assertions.assertEquals(songEntity.getAppleMusicLink(), songDto.getAppleMusicLinkDto());
-            Assertions.assertEquals(songEntity.getAlbum(), songDto.getAlbumDto());
+            Assertions.assertEquals(songEntity.getAlbum().getId(), songDto.getAlbumDto().getIdDto());
             Assertions.assertEquals(songEntity.getArtists().size(), songDto.getArtistsDto().size());
 
             List<Artist> songArtists = songEntity.getArtists();
-            List<Artist> songDtoArtists = songDto.getArtistsDto();
+            List<ArtistDto> songDtoArtists = songDto.getArtistsDto();
 
             for (int j = 0; j < songArtists.size(); j++) {
-                Assertions.assertEquals(songArtists.get(j).getId(), songDtoArtists.get(j).getId());
+                Assertions.assertEquals(songArtists.get(j).getId(), songDtoArtists.get(j).getIdDto());
             }
 
         }

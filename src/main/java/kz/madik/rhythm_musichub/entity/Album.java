@@ -12,11 +12,11 @@ import lombok.*;
 @Table(name = "t_album")
 public class Album {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "album_id")
     private Long id;
 
     private String title;
 
-    private int releaseYear;
+    private Integer releaseYear;
 }

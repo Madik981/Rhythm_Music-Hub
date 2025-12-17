@@ -26,4 +26,4 @@ databaseChangeLog:
                   name: birth_date
                   type: date
                   constraints:
-                    nullable: true
+                    nullable: false

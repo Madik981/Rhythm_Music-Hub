@@ -3,6 +3,8 @@ package kz.madik.rhythm_musichub.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.time.LocalDate;
+
 @Entity
 @Getter
 @Setter
@@ -12,13 +14,13 @@ import lombok.*;
 @Table(name = "t_artist")
 public class Artist {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String name;
 
     private String nationality;
 
-    private String birthDate;
+    private LocalDate birthDate;
 
 }

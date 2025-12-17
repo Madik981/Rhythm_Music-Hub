@@ -14,7 +14,7 @@ import java.util.List;
 @Table(name = "t_song")
 public class Song {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String name;

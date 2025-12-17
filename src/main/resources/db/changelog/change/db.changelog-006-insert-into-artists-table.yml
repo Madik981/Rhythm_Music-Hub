@@ -64,3 +64,15 @@ databaseChangeLog:
               - column:
                   name: birth_date
                   value: "2003-06-04"
+        - insert:
+            tableName: t_artist
+            columns:
+              - column:
+                  name: name
+                  value: Daft Punk
+              - column:
+                  name: nationality
+                  value: French
+              - column:
+                  name: birth_date
+                  value: "1993-01-20"

@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Random;
 
@@ -22,7 +23,7 @@ public class ArtistServiceTest {
                 .builder()
                 .nameDto("Test Artist")
                 .nationalityDto("Test")
-                .birthDateDto("2000-01-01")
+                .birthDateDto(LocalDate.parse("2000-01-01"))
                 .build();
 
         artistService.addArtist(addArtist);
@@ -56,7 +57,7 @@ public class ArtistServiceTest {
                 .builder()
                 .nameDto("Test Artist")
                 .nationalityDto("Test")
-                .birthDateDto("2000-01-01")
+                .birthDateDto(LocalDate.parse("2000-01-01"))
                 .build();
 
         artistService.addArtist(addArtist);
@@ -90,7 +91,7 @@ public class ArtistServiceTest {
                 .builder()
                 .nameDto("Test Artist")
                 .nationalityDto("Test")
-                .birthDateDto("2000-01-01")
+                .birthDateDto(LocalDate.parse("2000-01-01"))
                 .build();
 
 
@@ -133,7 +134,7 @@ public class ArtistServiceTest {
                 .builder()
                 .nameDto("Test Artist")
                 .nationalityDto("Test")
-                .birthDateDto("2000-01-01")
+                .birthDateDto(LocalDate.parse("2000-01-01"))
                 .build();
 
         artistService.addArtist(addArtist);
@@ -151,7 +152,7 @@ public class ArtistServiceTest {
                 .idDto(someId)
                 .nameDto("Update Artist")
                 .nationalityDto("Test Update")
-                .birthDateDto("2005-01-01")
+                .birthDateDto(LocalDate.parse("2005-01-01"))
                 .build();
 
         ArtistDto update = artistService.updateById(updateArtist.getIdDto(), updateArtist);
@@ -195,7 +196,7 @@ public class ArtistServiceTest {
                 .builder()
                 .nameDto("Test Artist")
                 .nationalityDto("Test")
-                .birthDateDto("2000-01-01")
+                .birthDateDto(LocalDate.parse("2000-01-01"))
                 .build();
 
         artistService.addArtist(addArtist);

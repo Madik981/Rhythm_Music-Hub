@@ -1,0 +1,150 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-into-song-artists-table
+      author: madik981
+      comment: insert initial data into song_artists table
+      changes:
+        - insert:
+            tableName: t_song_artists
+            columns:
+              - column:
+                  name: song_id
+                  valueNumeric: "1"
+              - column:
+                  name: artists_id
+                  valueNumeric: "1"
+        - insert:
+            tableName: t_song_artists
+            columns:
+              - column:
+                  name: song_id
+                  valueNumeric: "2"
+              - column:
+                  name: artists_id
+                  valueNumeric: "1"
+        - insert:
+            tableName: t_song_artists
+            columns:
+              - column:
+                  name: song_id
+                  valueNumeric: "3"
+              - column:
+                  name: artists_id
+                  valueNumeric: "1"
+        - insert:
+            tableName: t_song_artists
+            columns:
+              - column:
+                  name: song_id
+                  valueNumeric: "4"
+              - column:
+                  name: artists_id
+                  valueNumeric: "2"
+        - insert:
+            tableName: t_song_artists
+            columns:
+              - column:
+                  name: song_id
+                  valueNumeric: "5"
+              - column:
+                  name: artists_id
+                  valueNumeric: "2"
+        - insert:
+            tableName: t_song_artists
+            columns:
+              - column:
+                  name: song_id
+                  valueNumeric: "6"
+              - column:
+                  name: artists_id
+                  valueNumeric: "2"
+        - insert:
+            tableName: t_song_artists
+            columns:
+              - column:
+                  name: song_id
+                  valueNumeric: "7"
+              - column:
+                  name: artists_id
+                  valueNumeric: "2"
+        - insert:
+            tableName: t_song_artists
+            columns:
+              - column:
+                  name: song_id
+                  valueNumeric: "8"
+              - column:
+                  name: artists_id
+                  valueNumeric: "2"
+        - insert:
+            tableName: t_song_artists
+            columns:
+              - column:
+                  name: song_id
+                  valueNumeric: "9"
+              - column:
+                  name: artists_id
+                  valueNumeric: "2"
+        - insert:
+            tableName: t_song_artists
+            columns:
+              - column:
+                  name: song_id
+                  valueNumeric: "10"
+              - column:
+                  name: artists_id
+                  valueNumeric: "3"
+        - insert:
+            tableName: t_song_artists
+            columns:
+              - column:
+                  name: song_id
+                  valueNumeric: "10"
+              - column:
+                  name: artists_id
+                  valueNumeric: "6"
+        - insert:
+            tableName: t_song_artists
+            columns:
+              - column:
+                  name: song_id
+                  valueNumeric: "11"
+              - column:
+                  name: artists_id
+                  valueNumeric: "3"
+        - insert:
+            tableName: t_song_artists
+            columns:
+              - column:
+                  name: song_id
+                  valueNumeric: "12"
+              - column:
+                  name: artists_id
+                  valueNumeric: "3"
+        - insert:
+            tableName: t_song_artists
+            columns:
+              - column:
+                  name: song_id
+                  valueNumeric: "12"
+              - column:
+                  name: artists_id
+                  valueNumeric: "6"
+        - insert:
+            tableName: t_song_artists
+            columns:
+              - column:
+                  name: song_id
+                  valueNumeric: "13"
+              - column:
+                  name: artists_id
+                  valueNumeric: "4"
+        - insert:
+            tableName: t_song_artists
+            columns:
+              - column:
+                  name: song_id
+                  valueNumeric: "14"
+              - column:
+                  name: artists_id
+                  valueNumeric: "5"

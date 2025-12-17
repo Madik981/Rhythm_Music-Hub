@@ -1,7 +1,5 @@
 package kz.madik.rhythm_musichub.dto;
 
-import kz.madik.rhythm_musichub.entity.Album;
-import kz.madik.rhythm_musichub.entity.Artist;
 import lombok.*;
 
 import java.util.List;
@@ -16,13 +14,13 @@ public class SongDto {
 
     private String nameDto;
 
-    private int durationDto;
+    private Integer durationDto;
 
     private String spotifyLinkDto;
 
     private String appleMusicLinkDto;
 
-    private Album albumDto;
+    private AlbumDto albumDto;
 
-    private List<Artist> artistsDto;
+    private List<ArtistDto> artistsDto;
 }

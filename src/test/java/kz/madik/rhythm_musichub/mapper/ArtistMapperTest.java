@@ -7,6 +7,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,7 +20,7 @@ public class ArtistMapperTest {
     @Test
     void convertEntityToDtoTest(){
 
-        Artist artistEntity = new Artist(1L, "madik", "Kazakh", "2005-06-19");
+        Artist artistEntity = new Artist(1L, "madik", "Kazakh", LocalDate.parse("2005-06-19"));
 
         ArtistDto artistDto = artistMapper.toDto(artistEntity);
 
@@ -40,7 +41,7 @@ public class ArtistMapperTest {
     @Test
     void convertDtoToEntityTest(){
 
-        ArtistDto artistDto = new ArtistDto(1L, "madik", "Kazakh", "2005-06-19");
+        ArtistDto artistDto = new ArtistDto(1L, "madik", "Kazakh", LocalDate.parse("2005-06-19"));
 
         Artist artistEntity = artistMapper.toEntity(artistDto);
 
@@ -62,9 +63,9 @@ public class ArtistMapperTest {
     void convertEntityListToDtoListTest(){
 
         List<Artist> artistEntityList = new ArrayList<>();
-        artistEntityList.add(new Artist(1L, "madik)", "Kazakh", "2005-06-19"));
-        artistEntityList.add(new Artist(2L, "aigerim", "Kazakh", "2003-08-15"));
-        artistEntityList.add(new Artist(3L, "john", "American", "2000-11-25"));
+        artistEntityList.add(new Artist(1L, "madik)", "Kazakh", LocalDate.parse("2005-06-19")));
+        artistEntityList.add(new Artist(2L, "aigerim", "Kazakh", LocalDate.parse("2003-08-15")));
+        artistEntityList.add(new Artist(3L, "john", "American", LocalDate.parse("2000-11-25")));
 
 
         List<ArtistDto> artistDtoList = artistMapper.toDtoList(artistEntityList);
