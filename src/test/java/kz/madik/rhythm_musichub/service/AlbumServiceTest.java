@@ -138,8 +138,8 @@ public class AlbumServiceTest {
         AlbumDto updateAlbum = AlbumDto
                 .builder()
                 .idDto(someId)
-                .titleDto("Test Album")
-                .releaseYearDto(2023)
+                .titleDto("Test Album Update")
+                .releaseYearDto(2025)
                 .build();
 
         AlbumDto update = albumService.updateById(updateAlbum.getIdDto(), updateAlbum);
