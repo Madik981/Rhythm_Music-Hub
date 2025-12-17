@@ -41,7 +41,7 @@ databaseChangeLog:
                     nullable: false
         - addForeignKeyConstraint:
             baseTableName: t_song
-            baseColumnNames: id
+            baseColumnNames: album_id
             referencedTableName: t_album
             referencedColumnNames: album_id
             constraintName: fk_song_album
