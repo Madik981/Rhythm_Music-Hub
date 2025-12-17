@@ -1,0 +1,37 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-song-table
+      author: madik981
+      comment: creating song table
+      changes:
+        - createTable:
+            tableName: t_song
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(100)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: duration
+                  type: int
+                  constraints:
+                      nullable: false
+              - column:
+                  name: album_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+        - addForeignKeyConstraint:
+            baseTableName: t_song
+            baseColumnNames: id
+            referencedTableName: t_album
+            referencedColumnNames: album_id
+            constraintName: fk_song_album

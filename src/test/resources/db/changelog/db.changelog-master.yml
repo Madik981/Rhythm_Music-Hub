@@ -1,5 +1,9 @@
 databaseChangeLog:
   - include:
-      file: db/changelog/change/db.changelog-001-create-album-table.yml
+       file: db/changelog/change/db.changelog-001-create-album-table.yml
+  - include:
+      file: db/changelog/change/db.changelog-002-create-artist-table.yml
+  - include:
+      file: db/changelog/change/db.changelog-003-create-song-table.yml
   - include:
       file: db/changelog/change/db.changelog-004-insert-into-album-table.yml
