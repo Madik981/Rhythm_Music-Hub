@@ -11,6 +11,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -30,7 +31,7 @@ public class SongMapperTest {
                 "testLink",
                 "testLink",
                 new Album(1L, "madi", 2025),
-                List.of(new Artist(1L, "madik", "Kazakh", "20 September 1995"))
+                List.of(new Artist(1L, "madik", "Kazakh", LocalDate.parse("1995-09-20")))
         );
 
         SongDto songDto = songMapper.toDto(songEntity);
@@ -73,7 +74,7 @@ public class SongMapperTest {
                 "testLink",
                 "testLink",
                 new AlbumDto(1L, "madi", 2025),
-                List.of(new ArtistDto(1L, "madik", "Kazakh", "20 September 1995"))
+                List.of(new ArtistDto(1L, "madik", "Kazakh", LocalDate.parse("1995-09-20")))
         );
 
         Song songEntity = songMapper.toEntity(songDto);
@@ -116,7 +117,7 @@ public class SongMapperTest {
                 "testLink",
                 "testLink",
                 new Album(1L, "album1", 2020),
-                List.of(new Artist(1L, "artist1", "Kazakh", "22 February 1995"))
+                List.of(new Artist(1L, "artist1", "Kazakh", LocalDate.parse("1995-02-22")))
             ));
         songEntityList.add(new Song(
                 2L,
@@ -125,7 +126,7 @@ public class SongMapperTest {
                 "testLink",
                 "testLink",
                 new Album(2L, "album2", 2021),
-                List.of(new Artist(2L, "artist2", "Kazakh", "5 May 2001"))
+                List.of(new Artist(2L, "artist2", "Kazakh", LocalDate.parse("2001-05-05")))
             ));
         songEntityList.add(new Song(
                 3L,
@@ -134,7 +135,7 @@ public class SongMapperTest {
                 "testLink",
                 "testLink",
                 new Album(3L, "album3", 2022),
-                List.of(new Artist(3L, "artist3", "Kazakh", "12 December 1998"))
+                List.of(new Artist(3L, "artist3", "Kazakh", LocalDate.parse("1998-12-12")))
             ));
 
 

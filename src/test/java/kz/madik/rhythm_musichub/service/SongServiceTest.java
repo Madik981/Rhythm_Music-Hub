@@ -10,6 +10,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Random;
 
@@ -36,14 +37,14 @@ public class SongServiceTest {
                 .builder()
                 .nameDto("Test Artist 1")
                 .nationalityDto("Test Nationality 1")
-                .birthDateDto("1990-01-01")
+                .birthDateDto(LocalDate.parse("1990-01-01"))
                 .build();
 
         ArtistDto artistDto2 = ArtistDto
                 .builder()
                 .nameDto("Test Artist 2")
                 .nationalityDto("Test Nationality 2")
-                .birthDateDto("1992-02-02")
+                .birthDateDto(LocalDate.parse("1992-02-02"))
                 .build();
 
         albumService.addAlbum(albumDto);
@@ -107,14 +108,14 @@ public class SongServiceTest {
                 .builder()
                 .nameDto("Test Artist 1")
                 .nationalityDto("Test Nationality 1")
-                .birthDateDto("1990-01-01")
+                .birthDateDto(LocalDate.parse("1990-01-01"))
                 .build();
 
         ArtistDto artistDto2 = ArtistDto
                 .builder()
                 .nameDto("Test Artist 2")
                 .nationalityDto("Test Nationality 2")
-                .birthDateDto("1992-02-02")
+                .birthDateDto(LocalDate.parse("1992-02-02"))
                 .build();
 
         albumService.addAlbum(albumDto);
@@ -178,14 +179,14 @@ public class SongServiceTest {
                 .builder()
                 .nameDto("Test Artist 1")
                 .nationalityDto("Test Nationality 1")
-                .birthDateDto("1990-01-01")
+                .birthDateDto(LocalDate.parse("1990-01-01"))
                 .build();
 
         ArtistDto artistDto2 = ArtistDto
                 .builder()
                 .nameDto("Test Artist 2")
                 .nationalityDto("Test Nationality 2")
-                .birthDateDto("1992-02-02")
+                .birthDateDto(LocalDate.parse("1992-02-02"))
                 .build();
 
         albumService.addAlbum(albumDto);
@@ -279,14 +280,14 @@ public class SongServiceTest {
                 .builder()
                 .nameDto("Test Artist 1")
                 .nationalityDto("Test Nationality 1")
-                .birthDateDto("1990-01-01")
+                .birthDateDto(LocalDate.parse("1990-01-01"))
                 .build();
 
         ArtistDto artistDto2 = ArtistDto
                 .builder()
                 .nameDto("Test Artist 2")
                 .nationalityDto("Test Nationality 2")
-                .birthDateDto("1992-02-02")
+                .birthDateDto(LocalDate.parse("1992-02-02"))
                 .build();
 
         albumService.addAlbum(albumDto);
@@ -413,14 +414,14 @@ public class SongServiceTest {
                 .builder()
                 .nameDto("Test Artist 1")
                 .nationalityDto("Test Nationality 1")
-                .birthDateDto("1990-01-01")
+                .birthDateDto(LocalDate.parse("1990-01-01"))
                 .build();
 
         ArtistDto artistDto2 = ArtistDto
                 .builder()
                 .nameDto("Test Artist 2")
                 .nationalityDto("Test Nationality 2")
-                .birthDateDto("1992-02-02")
+                .birthDateDto(LocalDate.parse("1992-02-02"))
                 .build();
 
         albumService.addAlbum(albumDto);
