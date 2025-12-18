@@ -1,4 +1,19 @@
 services:
+  rhythm-backend:
+    container_name: 'RhythmBackend'
+    image: 'madik98/rhythm-spring-boot-project-repo'
+    depends_on:
+      - db-service
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db-service:5432/RhythmDB
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=postgres
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=none
+      - SPRING_JPA_SHOW_SQL=true
+      - SPRING-LIQUIBASE-CHANGE-LOG=classpath:db/changelog/db.changelog-master.yml
+      - SPRING-LIQUIBASE-ENABLED=true
+    ports:
+      - "8888:8080"
   db-service:
     container_name: 'RhythmDB'
     image: 'postgres'
