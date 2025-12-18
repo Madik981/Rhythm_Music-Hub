@@ -1,0 +1,20 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-permission-table
+      author: madik981
+      comment: create table for permissions
+      changes:
+        - createTable:
+            tableName: t_permission
+            columns:
+              - column:
+                  name: id
+                  type: bigserial
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(20)
+                  constraints:
+                    nullable: false

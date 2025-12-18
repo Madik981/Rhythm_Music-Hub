@@ -15,3 +15,15 @@ databaseChangeLog:
       file: db/changelog/change/db.changelog-007-insert-into-song-table.yml
   - include:
       file: db/changelog/change/db.changelog-008-insert-into-song-artists-table.yml
+  - include:
+      file: db/changelog/change/db.changelog-009-create-permission-table.yml
+  - include:
+      file: db/changelog/change/db.changelog-010-create-user-table.yml
+  - include:
+      file: db/changelog/change/db.changelog-011-create-user-permissions-table.yml
+  - include:
+      file: db/changelog/change/db.changelog-012-insert-into-permission-table.yml
+  - include:
+      file: db/changelog/change/db.changelog-013-insert-into-user-table.yml
+  - include:
+      file: db/changelog/change/db.changelog-014-insert-into-user-permissions-table.yml

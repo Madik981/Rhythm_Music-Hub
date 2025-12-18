@@ -1,0 +1,33 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-into-user-permissions-table
+      author: madik981
+      comment: insert initial data into user_permissions table
+      changes:
+        - insert:
+            tableName: t_user_permissions
+            columns:
+              - column:
+                  name: user_id
+                  valueNumeric: "1"
+              - column:
+                  name: permissions_id
+                  valueNumeric: "2"
+        - insert:
+            tableName: t_user_permissions
+            columns:
+              - column:
+                  name: user_id
+                  valueNumeric: "2"
+              - column:
+                  name: permissions_id
+                  valueNumeric: "1"
+        - insert:
+            tableName: t_user_permissions
+            columns:
+              - column:
+                  name: user_id
+                  valueNumeric: "3"
+              - column:
+                  name: permissions_id
+                  valueNumeric: "1"

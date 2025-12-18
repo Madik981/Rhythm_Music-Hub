@@ -1,0 +1,35 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-user-permissions-table
+      author: madik981
+      comment: create join table for users and permissions
+      changes:
+        - createTable:
+            tableName: t_user_permissions
+            columns:
+              - column:
+                  name: user_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+              - column:
+                  name: permissions_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+        - addPrimaryKey:
+            tableName: t_user_permissions
+            columnNames: user_id, permissions_id
+            constraintName: pk_user_permissions
+        - addForeignKeyConstraint:
+            baseTableName: t_user_permissions
+            baseColumnNames: user_id
+            referencedTableName: t_user
+            referencedColumnNames: id
+            constraintName: fk_user_permissions_user
+        - addForeignKeyConstraint:
+            baseTableName: t_user_permissions
+            baseColumnNames: permissions_id
+            referencedTableName: t_permission
+            referencedColumnNames: id
+            constraintName: fk_user_permissions_permission

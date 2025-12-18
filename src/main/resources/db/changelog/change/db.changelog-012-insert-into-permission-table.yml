@@ -1,0 +1,18 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-into-permission-table
+      author: madik981
+      comment: insert initial data into permission table
+      changes:
+        - insert:
+            tableName: t_permission
+            columns:
+              - column:
+                  name: name
+                  value: ROLE_USER
+        - insert:
+            tableName: t_permission
+            columns:
+              - column:
+                  name: name
+                  value: ROLE_ADMIN
