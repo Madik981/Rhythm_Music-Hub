@@ -3,6 +3,7 @@ package kz.madik.rhythm_musichub.controller;
 import kz.madik.rhythm_musichub.dto.AlbumDto;
 import kz.madik.rhythm_musichub.dto.ArtistDto;
 import kz.madik.rhythm_musichub.dto.SongDto;
+import kz.madik.rhythm_musichub.dto.UserModelDto;
 import kz.madik.rhythm_musichub.entity.UserModel;
 import kz.madik.rhythm_musichub.service.AlbumService;
 import kz.madik.rhythm_musichub.service.ArtistService;
@@ -29,8 +30,8 @@ public class UserApi {
     }
 
     @PostMapping("/register")
-    public void register(@RequestBody UserModel model) {
-        myUserService.register(model);
+    public UserModelDto register(@RequestBody UserModel model) {
+        return myUserService.register(model);
     }
 
 
