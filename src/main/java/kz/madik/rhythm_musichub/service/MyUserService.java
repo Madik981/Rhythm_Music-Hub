@@ -1,7 +1,9 @@
 package kz.madik.rhythm_musichub.service;
 
+import kz.madik.rhythm_musichub.dto.UserModelDto;
 import kz.madik.rhythm_musichub.entity.Permission;
 import kz.madik.rhythm_musichub.entity.UserModel;
+import kz.madik.rhythm_musichub.mapper.UserMapper;
 import kz.madik.rhythm_musichub.repository.PermissionRepository;
 import kz.madik.rhythm_musichub.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
@@ -28,6 +30,8 @@ public class MyUserService implements UserDetailsService {
     @Autowired
     private PermissionRepository permissionRep;
 
+    private final UserMapper userMapper;
+
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         UserModel user = userRepository.findByEmail(username);
@@ -38,7 +42,7 @@ public class MyUserService implements UserDetailsService {
         throw new UsernameNotFoundException("User Not Found");
     }
 
-    public void register(UserModel model){
+    public UserModelDto register(UserModel model){
         UserModel check = userRepository.findByEmail(model.getEmail());
         if (check == null){
             model.setPassword(passwordEncoder.encode(model.getPassword()));
@@ -47,6 +51,8 @@ public class MyUserService implements UserDetailsService {
             model.setPermissions(permissions);
             userRepository.save(model);
         }
+
+        return userMapper.toDto(model);
     }
 
 
