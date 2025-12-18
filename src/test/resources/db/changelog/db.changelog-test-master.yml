@@ -7,3 +7,11 @@ databaseChangeLog:
       file: db/changelog/change/db.changelog-test-003-create-song-table.yml
   - include:
       file: db/changelog/change/db.changelog-test-004-create-song-artists-table.yml
+  - include:
+      file: db/changelog/change/db.changelog-009-create-permission-table.yml
+  - include:
+      file: db/changelog/change/db.changelog-010-create-user-table.yml
+  - include:
+      file: db/changelog/change/db.changelog-011-create-user-permissions-table.yml
+  - include:
+      file: db/changelog/change/db.changelog-012-insert-into-permission-table.yml
