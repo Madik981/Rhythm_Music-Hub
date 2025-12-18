@@ -1,0 +1,42 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-into-user-table
+      author: madik981
+      comment: insert initial data into permission table
+      changes:
+        - insert:
+            tableName: t_user
+            columns:
+              - column:
+                  name: username
+                  value: madi
+              - column:
+                  name: email
+                  value: madi@gmail.com
+              - column:
+                  name: password
+                  value: $2a$12$yDGOm5qg2r8Kxmehq/9izeaqyoSZZuuxLTlaD/.igkrCn0gtnGqyG
+        - insert:
+            tableName: t_user
+            columns:
+              - column:
+                  name: username
+                  value: amir
+              - column:
+                  name: email
+                  value: amir@gmail.com
+              - column:
+                  name: password
+                  value: $2a$12$fknE5fR/LWqj7zoYLAEOZuHWLBAFHwy9P.Sd5m.eHcaYz.Z3fgK8m
+        - insert:
+            tableName: t_user
+            columns:
+              - column:
+                  name: username
+                  value: sulu
+              - column:
+                  name: email
+                  value: sulu@gmail.com
+              - column:
+                  name: password
+                  value: $2a$12$pweI9uN0OXf5SZWJRGkuiuvn/S55uAWsu46U2RHWs2MLCgMEu3GrS

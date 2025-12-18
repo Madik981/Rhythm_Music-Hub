@@ -28,9 +28,3 @@ databaseChangeLog:
                   type: varchar(100)
                   constraints:
                     nullable: false
-              - column:
-                  name: enabled
-                  type: boolean
-                  defaultValueBoolean: true
-                  constraints:
-                    nullable: false
