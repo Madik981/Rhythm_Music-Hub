@@ -33,8 +33,8 @@ public class MyUserService implements UserDetailsService {
     private final UserMapper userMapper;
 
     @Override
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        UserModel user = userRepository.findByEmail(username);
+    public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
+        UserModel user = userRepository.findByEmail(email);
 
         if(Objects.nonNull(user)) {
             return user;

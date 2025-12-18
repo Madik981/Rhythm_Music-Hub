@@ -38,11 +38,6 @@ public class UserModel implements UserDetails {
     }
 
     @Override
-    public String getUsername() {
-        return email;
-    }
-
-    @Override
     public String getPassword() {
         return password;
     }
