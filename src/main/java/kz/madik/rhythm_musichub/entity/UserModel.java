@@ -25,6 +25,11 @@ public class UserModel implements UserDetails {
     private String password;
 
     @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(
+            name = "t_user_permissions",
+            joinColumns = @JoinColumn(name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "permissions_id")
+    )
     private List<Permission> permissions;
 
     @Override
